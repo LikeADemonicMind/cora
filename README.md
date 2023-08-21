@@ -1,2 +1,2 @@
 # cora
-Breast cancer detection using classification. 
+Recognizing digits via webcam. 
