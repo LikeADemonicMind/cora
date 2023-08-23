@@ -23,6 +23,10 @@ def capture():
         img_cropped = frame[bbox[0][1]:bbox[1][1], bbox[0][0]:bbox[1][0]]
         img_gray = cv2.cvtColor(img_cropped, cv2.COLOR_BGR2GRAY)
         img_gray = cv2.resize(img_gray, (200, 200))
+
+        # Added a white square contour to our cropped frame to help centering   
+        bbox_color = (255, 255, 255)
+        cv2.rectangle(img_gray, (0, 0), (img_gray.shape[1], img_gray.shape[0]), bbox_color, 25)
         
         # Create Crosshair
         crosshair_length = 20
