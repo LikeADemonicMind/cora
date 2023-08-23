@@ -5,13 +5,11 @@ Created on Wed Aug 23 09:41:25 2023
 @author: Utilisateur
 """
 
-
 #Functions
 from capture import capture
 from preprocessing import preprocess
 from ai import ai
 from tts import tts
-
 
 def main():
     # Step 1 : image capture
