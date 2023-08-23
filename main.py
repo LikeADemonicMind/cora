@@ -5,27 +5,24 @@ Created on Wed Aug 23 09:41:25 2023
 @author: Utilisateur
 """
 
-# Librairies 
-import matplotlib.pyplot as plt
-import pyttsx3
-import joblib
 
 #Functions
-from preprocessing.py import preprocessing
+from capture import capture
+from preprocessing import preprocess
+from ai import ai
+from tts import tts
 
-# AI
-knn = joblib.load('knn_digits')
 
 def main():
     # Step 1 : image capture
-    
+    capture()
     # Step 2 : preprocessing
-    img = preprocessing()
+    img = preprocess()
     print(img)
     # Step 3 : AI 
-    
+    chiffre = ai(img)
     # Step 4 : text-to-speech
-  
+    tts(chiffre)
     
 if __name__ == "__main__":
     main()
