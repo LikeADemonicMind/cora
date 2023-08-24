@@ -64,4 +64,3 @@ def capture():
     cam.release()
     cv2.destroyAllWindows()
     
-capture()
